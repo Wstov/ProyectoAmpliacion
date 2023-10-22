@@ -1,19 +1,36 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 import { createBrowserRouter, RouterProvider  } from 'react-router-dom'
+import Layout from './components/Layout'
+import Nosotros from './pages/Nosotros'
+import Contacto from './pages/Contacto'
+import Inicio from './pages/Inicio'
+
 
 const router = createBrowserRouter([
  {
   path:'/',
-  element:<h1>Inicio</h1>
- },
- {
-  path:'/nosotros',
-  element:<h1>Nosotros</h1>
- }
+  element:<Layout/>,
+  children:[
+    {
+      index: true,
+      element: <Inicio/>
+    },
+    {
+      path:'/tiendadevideojuegos/nosotros',
+      element:<Nosotros/>
+     },
+     {
+      path:'/tiendadevideojuegos/contacto',
+      element:<Contacto/>
+     }
+  ]
+
+}
+ 
 
 ])
 
