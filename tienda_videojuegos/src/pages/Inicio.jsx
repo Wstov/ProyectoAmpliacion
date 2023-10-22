@@ -11,6 +11,7 @@ import card_6 from '../assets/zelda.webp'
 import card_7 from '../assets/of_elden_ring.webp'
 import card_8 from '../assets/gow.webp'
 import card_9 from '../assets/big_boss.webp'
+import { Link } from 'react-router-dom'
 
 
 function Inicio() {
@@ -180,7 +181,7 @@ function Inicio() {
                                 </div>
                             </div>
                             <div className="lc-block mb-5">
-                                <a className="btn btn-lg btn-light" href="https://goo.gl/maps/zy3NkDKV3x4iyUkL9" role="button">Contactanos</a>
+                                <Link className="btn btn-lg btn-light" to="/tiendadevideojuegos/contacto" role="button">Contactanos</Link>
                             </div>
                             <div className="lc-block border-top col-md-6 offset-md-3">
                                 <div editable="rich">

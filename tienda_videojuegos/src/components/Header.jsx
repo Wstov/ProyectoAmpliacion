@@ -6,8 +6,8 @@ import logotipo from '../assets/logotipo.png'
 
 function Header() {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient py-2 ">
+    <>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient py-2 pb-3 ">
         <div className="container-fluid mx-5">
 
           <Link to='/' className="navbar-brand">
@@ -41,7 +41,7 @@ function Header() {
         </div>
       </nav>
 
-    </div>
+    </>
   )
 }
 
