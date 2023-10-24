@@ -1,1 +1,19 @@
+.carrito-icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
 
+.carrito-dropdown {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 250px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Si tu navbar tiene un padding o margin, asegúrate de ajustar el valor de "top" en .carrito-dropdown para que se alinee correctamente */

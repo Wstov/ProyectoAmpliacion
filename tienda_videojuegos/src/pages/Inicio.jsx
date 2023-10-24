@@ -1,7 +1,6 @@
 import imagen_1 from '../assets/7776101.webp'
 import imagen_2 from '../assets/1373100.webp'
 import imagen_3 from '../assets/3945673.webp'
-
 import card_1 from '../assets/doom.webp'
 import card_2 from '../assets/arthur.webp'
 import card_3 from '../assets/codw.webp'
@@ -12,6 +11,10 @@ import card_7 from '../assets/of_elden_ring.webp'
 import card_8 from '../assets/gow.webp'
 import card_9 from '../assets/big_boss.webp'
 import { Link } from 'react-router-dom'
+
+
+
+
 
 
 function Inicio() {

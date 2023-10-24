@@ -10,6 +10,7 @@ import Contacto from './pages/Contacto'
 import Inicio from './pages/Inicio'
 
 
+
 const router = createBrowserRouter([
  {
   path:'/',
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
   children:[
     {
       index: true,
-      element: <Inicio/>
+      element: <Inicio />
     },
     {
       path:'/tiendadevideojuegos/nosotros',
