@@ -1,4 +1,4 @@
-import Formulario from '../models/Formulario.js';
+import Formulario from '../models/Formulario.js'
 
 
 // const contactar = (req, res) => {
@@ -6,7 +6,7 @@ import Formulario from '../models/Formulario.js';
 //     console.log('hasta aqui llega');
 // }
 
-const contactar = async (req,res) => {
+const contactar = async (req, res) => {
     const datos = await Formulario.create(req.body)
 
     res.json(datos)

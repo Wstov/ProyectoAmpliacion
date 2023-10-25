@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import db from '../config/db.js'
 
 
-const Fromulario = db.define('datos', {
+const Formulario = db.define('datos', {
     nombre: {
         type: DataTypes.STRING,
         allowNull: false
@@ -29,4 +29,4 @@ const Fromulario = db.define('datos', {
     },
 })
 
-export default Fromulario;
+export default Formulario;

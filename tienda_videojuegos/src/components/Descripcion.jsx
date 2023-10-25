@@ -9,7 +9,7 @@ function Descripcion() {
                     <div className="bg-light p-4 rounded shadow text-center">
                         <h1>Descripción del Proyecto</h1>
                         <p className="lh-4 fs-4">
-                            El proyecto "GAME STORE" utiliza una variedad de tecnologías y dependencias para su desarrollo. A continuación, se proporciona una descripción de las principales tecnologías y bibliotecas utilizadas en el proyecto:
+                            El proyecto "GAME STORE" utiliza una variedad de tecnologías y dependencias para su desarrollo y a continuación, se proporciona una descripción de las principales tecnologías y bibliotecas utilizadas en el proyecto:
 
                             <br />1. **Vite**: Vite es el motor de compilación y desarrollo que se utiliza en el proyecto. Es una herramienta de compilación rápida y eficiente para aplicaciones web modernas que utilizan JavaScript y TypeScript.
                             <br />2. **React y React DOM**: React es una biblioteca de JavaScript para la construcción de interfaces de usuario. React DOM es una biblioteca que permite renderizar componentes React en el navegador web.

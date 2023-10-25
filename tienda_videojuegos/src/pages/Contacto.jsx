@@ -1,6 +1,6 @@
 import imagenFormulario from '../assets/9100862.webp'
 import { Form } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 
@@ -39,6 +39,9 @@ export async function action({ request }) {
 
 
 function Contacto() {
+  const [mostrarToast, setMostrarToast] = useState(false);
+
+
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
   const [edad, setEdad] = useState('');
@@ -46,7 +49,8 @@ function Contacto() {
   const [email, setEmail] = useState('');
   const [mensaje, setMensaje] = useState('');
 
-  const limpiarCampos = () => {
+  const limpiarCampos = (e) => {
+    e.preventDefault();
     // Llama a las funciones de actualización del estado para restablecer los campos
     setNombre('');
     setApellido('');
@@ -54,7 +58,19 @@ function Contacto() {
     setTelefono('');
     setEmail('');
     setMensaje('');
+
+
+    setMostrarToast(true);
   };
+
+
+  useEffect(() => {
+    if (mostrarToast) {
+      setTimeout(() => {
+        setMostrarToast(false);
+      }, 5000);
+    }
+  }, [mostrarToast]);
 
 
 
@@ -83,7 +99,7 @@ function Contacto() {
                   id="inputNombre"
                   name="nombre"
                   value={nombre}
-                onChange={(e) => setNombre(e.target.value)}
+                  onChange={(e) => setNombre(e.target.value)}
                 />
 
               </div>
@@ -97,7 +113,7 @@ function Contacto() {
                   placeholder="Apellido"
                   name="apellido"
                   value={apellido}
-                onChange={(e) => setApellido(e.target.value)}
+                  onChange={(e) => setApellido(e.target.value)}
                 />
               </div>
 
@@ -110,7 +126,7 @@ function Contacto() {
                   placeholder="Edad"
                   name="edad"
                   value={edad}
-                onChange={(e) => setEdad(e.target.value)}
+                  onChange={(e) => setEdad(e.target.value)}
                 />
               </div>
 
@@ -123,7 +139,7 @@ function Contacto() {
                   placeholder="Teléfono"
                   name="telefono"
                   value={telefono}
-                onChange={(e) => setTelefono(e.target.value)}
+                  onChange={(e) => setTelefono(e.target.value)}
                 />
               </div>
 
@@ -136,7 +152,7 @@ function Contacto() {
                   placeholder="E-mail"
                   name="email"
                   value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
@@ -149,15 +165,39 @@ function Contacto() {
                   placeholder="Escribe tu mensaje aquí..."
                   name="mensaje"
                   value={mensaje}
-                onChange={(e) => setMensaje(e.target.value)}
+                  onChange={(e) => setMensaje(e.target.value)}
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn btn-dark w-100 mt-3">Enviar</button>
+              <button type="submit" className="btn btn-dark w-100 mt-3" >Enviar</button>
+
+
+
+              <div className="toast-container position-fixed bottom-0 end-0 p-5">
+                <div id="liveToast" className={`toast ${mostrarToast ? 'show' : ''}`} role="alert" aria-live="assertive" aria-atomic="true" style={{ width: '500px' }}>                  <div className="toast-header">
+
+                  <strong className="me-auto fs-5">Los datos del formulario se enviaron correctamente.</strong>
+
+                  <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                  <div className="toast-body fs-5">
+
+                    Game Store - Play Everything
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
             </div>
           </Form>
         </div>
       </div>
+
+
+
     </>
   )
 }
