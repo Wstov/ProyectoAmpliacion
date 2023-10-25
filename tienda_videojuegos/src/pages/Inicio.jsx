@@ -3,13 +3,16 @@ import imagen_2 from '../assets/1373100.webp'
 import imagen_3 from '../assets/3945673.webp'
 import card_1 from '../assets/doom.webp'
 import card_2 from '../assets/arthur.webp'
-import card_3 from '../assets/codw.webp'
+import card_3 from '../assets/all_of_duty_modern_warfare_2.webp'
 import card_4 from '../assets/grand_theft_auto_v.webp'
 import card_5 from '../assets/mario.webp'
 import card_6 from '../assets/zelda.webp'
 import card_7 from '../assets/of_elden_ring.webp'
 import card_8 from '../assets/gow.webp'
 import card_9 from '../assets/big_boss.webp'
+import card_10 from '../assets/sident_evils.webp'
+import card_11 from '../assets/cuphead.webp'
+import card_12 from '../assets/warcraft_.webp'
 import { Link } from 'react-router-dom'
 
 
@@ -88,7 +91,7 @@ function Inicio() {
                         <div className="card h-100 text-center">
                             <img src={card_3} className="card-img-top" alt="Call of Duty - Warzone" />
                             <div className="card-body">
-                                <h5 className="card-title">Call of Duty - Warzone</h5>
+                                <h5 className="card-title">Call of Duty - MW</h5>
                                 <p className="card-text">$35</p>
                                 <a href="#" className="btn btn-dark">Agregar al Carrito</a>
                             </div>
@@ -150,6 +153,36 @@ function Inicio() {
                             <div className="card-body">
                                 <h5 className="card-title">Metal Gear Solid</h5>
                                 <p className="card-text">$25</p>
+                                <a href="#" className="btn btn-dark">Agregar al Carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="card h-100 text-center">
+                            <img src={card_10} className="card-img-top" alt="Metal Gear Solid" />
+                            <div className="card-body">
+                                <h5 className="card-title">Resident Evil 2</h5>
+                                <p className="card-text">$25</p>
+                                <a href="#" className="btn btn-dark">Agregar al Carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="card h-100 text-center">
+                            <img src={card_11} className="card-img-top" alt="Metal Gear Solid" />
+                            <div className="card-body">
+                                <h5 className="card-title">Cuphead</h5>
+                                <p className="card-text">$12</p>
+                                <a href="#" className="btn btn-dark">Agregar al Carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="card h-100 text-center">
+                            <img src={card_12} className="card-img-top" alt="Metal Gear Solid" />
+                            <div className="card-body">
+                                <h5 className="card-title">World of WarCraft</h5>
+                                <p className="card-text">$30</p>
                                 <a href="#" className="btn btn-dark">Agregar al Carrito</a>
                             </div>
                         </div>

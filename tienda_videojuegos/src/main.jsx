@@ -8,14 +8,18 @@ import Layout from './components/Layout'
 import Nosotros from './pages/Nosotros'
 import Contacto, { action as nuevoContacto } from './pages/Contacto'
 import Inicio from './pages/Inicio'
-
-
-
+import Descripcion from './components/Descripcion'
+import Base from './components/Base'
 
 
 
 
 const router = createBrowserRouter([
+  {
+    path: '/descripcion',
+    element: <Descripcion/>,
+
+  },
   {
     path: '/',
     element: <Layout />,
@@ -34,7 +38,6 @@ const router = createBrowserRouter([
         action: nuevoContacto,
       }
     ]
-
   }
 
 

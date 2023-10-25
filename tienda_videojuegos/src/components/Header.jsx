@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
 import logotipo from '../assets/logotipo.png'
-// import { useState } from 'react';
 
 
+function Header() {
 
-function Header(props) {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient py-2 pb-3">
@@ -23,18 +22,22 @@ function Header(props) {
             <ul className="d-none d-lg-flex navbar-nav mx-auto my-3 my-lg-0 position-absolute top-50 start-50 translate-middle">
               <li className="nav-item me-4"><Link className="nav-link" to="/tiendadevideojuegos/nosotros">Nosotros</Link></li>
               <li className="nav-item me-4"><Link className="nav-link" to="/">Comprar</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/tiendadevideojuegos/contacto">Contacto</Link></li>
+              <li className="nav-item me-4"><Link className="nav-link" to="/tiendadevideojuegos/contacto">Contacto</Link></li>
+              <li className="nav-item me-4"><Link className="nav-link" to="https://store.steampowered.com/?l=spanish">Steam</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/descripcion">Descripción</Link></li>
             </ul>
 
             <ul className="navbar-nav my-3 my-lg-0 d-lg-none">
               <li className="nav-item me-4"><Link className="nav-link" to="/tiendadevideojuegos/nosotros">Nosotros</Link></li>
               <li className="nav-item me-4"><Link className="nav-link" to="/">Comprar</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/tiendadevideojuegos/contacto">Contacto</Link></li>
+              <li className="nav-item me-4"><Link className="nav-link" to="/tiendadevideojuegos/contacto">Contacto</Link></li>
+              <li className="nav-item me-4"><Link className="nav-link" to="https://store.steampowered.com/?l=spanish">Steam</Link></li>
+              <li className="nav-item "><Link className="nav-link" to="/descripcion">Descripción</Link></li>
             </ul>
 
 
             {/* CARRITO */}
-            <div className="ms-lg-auto">
+            <div className="ms-lg-auto" >
               <svg xmlns="http://www.w3.org/2000/svg"
                 width="40"
                 height="40"
