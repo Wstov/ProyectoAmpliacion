@@ -1,28 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Carrito() {
-    const [isOpen, setIsOpen] = useState(false);
-
+const CartItem = ({ nombre, precio, imagen, cantidad }) => {
     return (
-        <div className="two columns u-pull-right">
-
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                fill="lightgray"
-                className="bi bi-cart2 "
-                viewBox="0 0 16 16"
-                onClick={() => setIsOpen(!isOpen)}
-                style={{ cursor: 'pointer' }}
-            >
-                {/* <path d="..." /> */}
-            </svg>
-
+        <div className="card mb-3">
+            <div className="row g-0">
+                <div className="col-md-4">
+                    <img src={imagen} alt={nombre} className="img-fluid" />
+                </div>
+                <div className="col-md-8">
+                    <div className="card-body">
+                        <h5 className="card-title">{nombre}</h5>
+                        <p className="card-text">Precio: ${precio}</p>
+                        <p className="card-text">Cantidad: {cantidad}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
-}
+};
 
-export default Carrito;
-
-
+export default CartItem;
